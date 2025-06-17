@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>> Generate a secure password</h2>
+      <div class="theme-toggle">
+        <input type="checkbox" id="themeSwitch" />
+        <label for="themeSwitch"></label>
+      </div>
+    </div>
+    <input type="text" id="passwordOutput" readonly />
+    <button id="copyBtn">📋</button>
+
+    <h3>Customize your password</h3>
+    <div class="options">
+      <label><input type="checkbox" id="uppercase" checked /> Uppercase</label>
+      <label><input type="checkbox" id="lowercase" checked /> Lowercase</label>
+      <label><input type="checkbox" id="numbers" checked /> Numeric</label>
+      <label><input type="checkbox" id="symbols" /> Symbols</label>
+      <label>Password Length:
+        <input type="number" id="length" min="4" max="50" value="20" />
+      </label>
+    </div>
+
+    <button id="generateBtn">Generate</button>
+    <footer>
+      <p>Made with <span class="heart">❤</span> by Vandana Bhakuni</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+:root {
+  --bg-dark: #0f0f0f;
+  --text-dark: #ffffff;
+  --accent-dark: #00ff00;
+
+  --bg-light: #f9f9f9;
+  --text-light: #000000;
+  --accent-light: #007700;
+}
+
+body {
+  margin: 0;
+  font-family: monospace;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body.light {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+.container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  border: 2px solid currentColor;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme-toggle input {
+  display: none;
+}
+
+.theme-toggle label {
+  width: 40px;
+  height: 20px;
+  background: grey;
+  border-radius: 20px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.theme-toggle label::after {
+  content: '';
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  transition: 0.3s;
+}
+
+#themeSwitch:checked + label::after {
+  left: 21px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.1em;
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#copyBtn {
+  float: right;
+  margin-top: -3rem;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: inherit;
+}
+
+.options label {
+  display: block;
+  margin: 10px 0;
+}
+
+#generateBtn {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: var(--accent-dark);
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+body.light #generateBtn {
+  background-color: var(--accent-light);
+}
+
+footer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.heart {
+  color: red;
+}
